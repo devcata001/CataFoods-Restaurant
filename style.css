@@ -1,0 +1,197 @@
+nav {
+    background-color: orange;
+}
+
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1729394405518-eaf2a0203aa7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+.hero-section h1,
+.hero-section h3,
+.hero-section a {
+    position: relative;
+    z-index: 1;
+}
+.hero-section a {
+    background-color: orange;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.hero-section a:hover {
+    background-color: darkorange;
+}
+
+
+.menu-section {
+    padding: 80px 0;
+    background-color: #fffaf5;
+}
+
+.menu-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.menu-section .card img {
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.menu-section .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+
+@media (min-width:0px) {
+    body {
+    overflow-x: hidden;
+    }
+}
+
+
+
+/* Static dish option buttons */
+.dish-options small { color: #6c757d; font-size: .85rem; }
+.dish-options .btn-group .btn {
+    min-width: 68px;
+    padding: .35rem .6rem;
+    font-weight: 600;
+    color: orange;
+    border-color: rgba(13,110,253,0.18);
+}
+.dish-options .btn-group .btn:hover {
+    background: rgba(13,110,253,0.06);
+}
+.dish-options .btn-group .btn.active,
+.dish-options .btn-group .btn.active:focus {
+    background: orange;
+    color: #fff;
+    border-color: orange;
+    box-shadow: 0 8px 18px rgba(13,110,253,0.12);
+}
+
+/* ensure good spacing on small screens */
+@media (max-width: 576px) {
+    .dish-options .btn-group .btn { min-width: 54px; padding: .35rem .5rem; font-size: .85rem; }
+}
+
+
+/* Auth modal (styled) */
+.auth-modal .modal-content {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+    border: none;
+}
+
+.auth-modal .modal-header {
+    background: linear-gradient(90deg,#ff8a00,#ff4d00);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    align-items: center;
+}
+
+.auth-modal .modal-title {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    font-size: 1.1rem;
+}
+
+.auth-tabs .nav-link {
+    border-radius: 999px;
+    padding: .55rem .9rem;
+    font-weight: 600;
+    color: #333;
+    background: #f6f6f6;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.auth-tabs .nav-link.active {
+    background: linear-gradient(90deg,#ff7a00,#ff4d00);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(255,90,0,0.12);
+}
+
+.auth-modal .form-control {
+    border-radius: 10px;
+    padding: .7rem .9rem;
+    border: 1px solid rgba(0,0,0,0.09);
+    transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.auth-modal .form-control:focus {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-color: rgba(0,0,0,0.18);
+    outline: none;
+}
+
+.btn-auth {
+    border-radius: 999px;
+    padding: .65rem 1rem;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.btn-primary.btn-auth {
+    background: linear-gradient(90deg,#ff7a00,#ff4d00);
+    border: none;
+    color: #fff;
+}
+
+.btn-success.btn-auth {
+    background: linear-gradient(90deg,#06b26a,#039f5a);
+    border: none;
+    color: #fff;
+}
+
+.auth-modal .btn-outline-secondary.btn-sm {
+    border-radius: 999px;
+    padding: .35rem .8rem;
+    font-weight: 600;
+}
+
+/* small-screen tweaks */
+@media (max-width: 576px) {
+    .modal-dialog { margin: 1.5rem; }
+    .auth-tabs .nav-link { padding: .45rem .6rem; font-size: .9rem; }
+    .auth-modal .modal-header { padding: .75rem 1rem; font-size: .95rem; }
+    .btn-auth { padding: .55rem .8rem; font-size: .95rem; }
+}
+
+/* accessibility: increase contrast on focus */
+.auth-modal .form-control:focus-visible {
+    outline: 3px solid rgba(255,120,0,0.12);
+    outline-offset: 2px;
+}
